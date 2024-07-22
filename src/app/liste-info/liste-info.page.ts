@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-liste-info',
   templateUrl: './liste-info.page.html',
-  styleUrls: ['./liste-info.page.scss'],
+  styleUrls: ['./liste-info.page.scss'], 
 })
 export class ListeInfoPage implements OnInit {
 
