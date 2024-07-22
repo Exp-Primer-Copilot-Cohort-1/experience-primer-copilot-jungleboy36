@@ -1,0 +1,362 @@
+<style>
+  /* Basic table styling */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table th, .responsive-table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+  .responsive-table, .responsive-table thead, .responsive-table tbody, .responsive-table th, .responsive-table td, .responsive-table tr {
+    display: block;
+  }
+
+  .responsive-table thead tr {
+    display: none;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 1rem;
+  }
+
+  .responsive-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50%;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: calc(50% - 10px);
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .responsive-table td:last-child {
+    border-bottom: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+
+  .btn-responsive{
+    margin-top: 30px;
+    height: 40px;
+  }
+  .checkbox-responsive{
+margin-left:auto;
+margin-right:10px;
+margin-top:35px;  }
+}
+</style>
+
+<div class="sidemenu-area" >
+  <div class="sidemenu-header">
+          <img src="assets/img/small-logo.png" alt="image">
+          <span>Olaf</span>
+
+      <div class="burger-menu d-none d-lg-block"  >
+          <span class="top-bar"></span>
+          <span class="middle-bar"></span>
+          <span class="bottom-bar"></span>
+      </div>
+
+      <div class="responsive-burger-menu d-block d-lg-none" id="burger-menu"  >
+          <span class="top-bar" ></span>
+          <span class="middle-bar"></span>
+          <span class="bottom-bar"></span>
+      </div>
+  </div>
+
+  <div class="sidemenu-body" style="pointer-events:none;">
+      <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+          <li class="nav-item-title">
+              Main
+          </li>
+
+          <li class="nav-item">
+              <a href="#" class="collapsed-nav-link nav-link" aria-expanded="false">
+                  <span class="icon"><i class='bx bx-home-circle'></i></span>
+                  <span class="menu-title">Dashboard</span>
+                  <span class="badge"></span>
+              </a>
+
+              <ul class="sidemenu-nav-second-level">
+                  <li class="nav-item">
+                      <a href="dashboard-analytics.html" class="nav-link">
+                          <span class="icon"><i class='bx bx-analyse'></i></span>
+                          <span class="menu-title">Analytics</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="dashboard-ecommerce.html" class="nav-link">
+                          <span class="icon"><i class='bx bxs-shopping-bag'></i></span>
+                          <span class="menu-title">eCommerce</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+         
+      </ul>
+  </div>
+</div>
+
+<div class="main-content d-flex flex-column" style="margin-left: -50px;overflow-y: auto;">
+
+<!-- End Sidemenu Area -->
+
+<!-- Start Main Content Wrapper Area -->
+
+  <!-- Top Navbar Area -->
+  <nav class="navbar top-navbar navbar-expand" style="background-color: white;">
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+        <div class="responsive-burger-menu d-block d-lg-none">
+            <span class="top-bar"></span>
+            <span class="middle-bar"></span>
+            <span class="bottom-bar"></span>
+        </div>
+        
+      
+       
+        <ul class="navbar-nav right-nav align-items-center">
+          
+            <li class="nav-item dropdown profile-nav-item" style="margin-right: 30px;">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="menu-profile">
+                        <span class="name">Bonjour! Andro</span>
+                        <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                    </div>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="dropdown-header d-flex flex-column align-items-center">
+                        <div class="figure mb-3">
+                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                        </div>
+
+                        <div class="info text-center">
+                            <span class="name">Andro Smith</span>
+                            <p class="mb-3 email"></p>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="dropdown-footer">
+                        <ul class="profile-nav">
+                            <li class="nav-item">
+                                <a  class="nav-link">
+                                    <i class='bx bx-log-out'></i> <span (click)="logout()">Se déconnecter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+ </div>
+</nav>
+<!-- End Top Navbar Area -->
+
+<br><br>
+<h4>Rechercher:</h4><br>
+<div class="form-row">
+  <div class="form-group col-md-2">
+      <label for="inputCity">Commercial</label>
+      <select id="inputState" class="form-control">
+        <option selected disabled></option>
+        <option value="3">bounadi fouad</option><option value="6">Hafsia Sheyma</option><option value="7">Megange Fabrice</option><option value="12">Sarra Sarra</option><option value="14">Haddar Samira</option><option value="16">Salim Salim</option><option value="19">Benamara Amine</option><option value="20">Chouachnia Rim</option><option value="21">Jamila Jamila</option> 
+
+    </select>  </div>
+  <div class="form-group col-md-2">
+      <label for="inputState">Date</label>
+     <input type="date" class="form-control">
+  </div>
+  <div class="form-group col-md-2">
+      <label for="inputZip">Client</label>
+      <input type="text" class="form-control" id="inputZip">
+  </div>
+    
+<button type="button" class="btn btn-primary btn-responsive" >Rechercher</button>
+
+<div class="form-check btn-responsive checkbox-responsive">
+  <input class="form-check-input" type="checkbox" id="gridCheck">
+  <label class="form-check-label" for="gridCheck">
+      Mes visites
+  </label>
+</div>
+<div class="form-check btn-responsive checkbox-responsive">
+  <input class="form-check-input" type="checkbox" id="gridCheck">
+  <label class="form-check-label" for="gridCheck">
+      Aujourd'hui
+  </label>
+</div>
+  <table class="table table-striped responsive-table">
+    <thead>
+        <tr>
+            <th scope="col">Client</th>
+            <th scope="col">Départ</th>
+            <th scope="col">Suivi</th>
+            <th scope="col">Visite</th>
+            <th scope="col">Tarification</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Client">Mark</td>
+            <td data-label="Départ">Rue Des Deux Frères 7
+              78150 Le Chesnay-rocquencourt</td>
+            <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Arrivée</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Inventaire</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Logistique</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Tarification</span> </td>
+            <td data-label="Visite"><span class="badge badge-success"><i class="bx bx-check"></i> RDV Technique Effectuée</span><br>
+              03/07/2024 09:30<br>
+              <span class="badge badge-success">Megange Fabrice</span><br>
+              Devis Envoyé par : Jamila Jamila,<br> Le 2024-07-03 14:08:28</td>
+            <td data-label="Tarification"><button class="btn btn-primary" (click)="info()"> Créer</button></td>
+
+        </tr>
+        <tr>
+          <td data-label="Client">Mark</td>
+            <td data-label="Départ">9 Sq. des Genêts
+              78114 Magny-les-Hameaux</td>
+            <td data-label="Suivi"><span class="badge badge-success"><i class="bx bx-check"></i> Acces Départ</span> <span class="badge badge-success"><i class="bx bx-check"></i> Acces Arrivée</span>  <span class="badge badge-success"><i class="bx bx-check"></i> Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-success"><i class="bx bx-check"></i> Tarification</span> </td>
+            <td data-label="Visite"><span class="badge badge-warning">VISIO Programmée</span><br>
+              03/07/2024 18:20 <br>
+              <span class="badge badge-success">Sarra Sarra</span><br>
+              Devis Envoyé par : Sarra Sarra, <br>Le 2024-07-03 18:45:54</td>
+            <td data-label="Tarification"><button class="btn btn-primary" style="margin-top: 10px;" (click)="info()"> Créer</button></td>
+
+        </tr>
+        <tr>
+          <td data-label="Client">Mark</td>
+            <td data-label="Départ">47 Boulevard De La République
+              92250 La Garenne-colombes</td>
+            <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Acces Arrivée</span> <span class="badge badge-success"><i class="bx bx-check"></i>Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-danger"><i class="bx bx-x-cirlce"></i> Tarification</span> </td>
+            <td data-label="Visite"><span class="badge badge-success"> <i class="bx bx-check"></i>Appel Telephonique Programmée</span><br>
+              03/07/2024 18:30<br>
+              <span class="badge badge-success">Megange Fabrice</span><br>
+              Devis Envoyé par : Hafsia Sheyma, <br>Le 2024-07-09 09:36:46</td>
+            <td data-label="Tarification"><button class="btn btn-primary" (click)="info()"> Créer</button></td>
+        </tr>
+        <tr>
+          <td data-label="Client">Mark</td>
+          <td data-label="Départ">Rue Des Deux Frères 7
+            78150 Le Chesnay-rocquencourt</td>
+          <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Arrivée</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Inventaire</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Logistique</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Tarification</span> </td>
+          <td data-label="Visite"><span class="badge badge-success"><i class="bx bx-check"></i> RDV Technique Effectuée</span><br>
+            03/07/2024 09:30<br>
+            <span class="badge badge-success">Megange Fabrice</span><br>
+            Devis Envoyé par : Jamila Jamila,<br> Le 2024-07-03 14:08:28</td>
+          <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+
+      </tr>
+      <tr>
+        <td data-label="Client">Mark</td>
+          <td data-label="Départ">9 Sq. des Genêts
+            78114 Magny-les-Hameaux</td>
+          <td data-label="Suivi"><span class="badge badge-success"><i class="bx bx-check"></i> Acces Départ</span> <span class="badge badge-success"><i class="bx bx-check"></i> Acces Arrivée</span>  <span class="badge badge-success"><i class="bx bx-check"></i> Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-success"><i class="bx bx-check"></i> Tarification</span> </td>
+          <td data-label="Visite"><span class="badge badge-warning">VISIO Programmée</span><br>
+            03/07/2024 18:20 <br>
+            <span class="badge badge-success">Sarra Sarra</span><br>
+            Devis Envoyé par : Sarra Sarra, <br>Le 2024-07-03 18:45:54</td>
+          <td data-label="Tarification"><button class="btn btn-primary" style="margin-top: 10px;"> Créer</button></td>
+
+      </tr>
+      <tr>
+        <td data-label="Client">Mark</td>
+          <td data-label="Départ">47 Boulevard De La République
+            92250 La Garenne-colombes</td>
+          <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Acces Arrivée</span> <span class="badge badge-success"><i class="bx bx-check"></i>Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-danger"><i class="bx bx-x-cirlce"></i> Tarification</span> </td>
+          <td data-label="Visite"><span class="badge badge-success"> <i class="bx bx-check"></i>Appel Telephonique Programmée</span><br>
+            03/07/2024 18:30<br>
+            <span class="badge badge-success">Megange Fabrice</span><br>
+            Devis Envoyé par : Hafsia Sheyma, <br>Le 2024-07-09 09:36:46</td>
+          <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+      </tr>
+      <tr>
+        <td data-label="Client">Mark</td>
+        <td data-label="Départ">Rue Des Deux Frères 7
+          78150 Le Chesnay-rocquencourt</td>
+        <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Arrivée</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Inventaire</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Logistique</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Tarification</span> </td>
+        <td data-label="Visite"><span class="badge badge-success"><i class="bx bx-check"></i> RDV Technique Effectuée</span><br>
+          03/07/2024 09:30<br>
+          <span class="badge badge-success">Megange Fabrice</span><br>
+          Devis Envoyé par : Jamila Jamila,<br> Le 2024-07-03 14:08:28</td>
+        <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+
+    </tr>
+    <tr>
+      <td data-label="Client">Mark</td>
+        <td data-label="Départ">9 Sq. des Genêts
+          78114 Magny-les-Hameaux</td>
+        <td data-label="Suivi"><span class="badge badge-success"><i class="bx bx-check"></i> Acces Départ</span> <span class="badge badge-success"><i class="bx bx-check"></i> Acces Arrivée</span>  <span class="badge badge-success"><i class="bx bx-check"></i> Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-success"><i class="bx bx-check"></i> Tarification</span> </td>
+        <td data-label="Visite"><span class="badge badge-warning">VISIO Programmée</span><br>
+          03/07/2024 18:20 <br>
+          <span class="badge badge-success">Sarra Sarra</span><br>
+          Devis Envoyé par : Sarra Sarra, <br>Le 2024-07-03 18:45:54</td>
+        <td data-label="Tarification"><button class="btn btn-primary" style="margin-top: 10px;"> Créer</button></td>
+
+    </tr>
+    <tr>
+      <td data-label="Client">Mark</td>
+        <td data-label="Départ">47 Boulevard De La République
+          92250 La Garenne-colombes</td>
+        <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Acces Arrivée</span> <span class="badge badge-success"><i class="bx bx-check"></i>Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-danger"><i class="bx bx-x-cirlce"></i> Tarification</span> </td>
+        <td data-label="Visite"><span class="badge badge-success"> <i class="bx bx-check"></i>Appel Telephonique Programmée</span><br>
+          03/07/2024 18:30<br>
+          <span class="badge badge-success">Megange Fabrice</span><br>
+          Devis Envoyé par : Hafsia Sheyma, <br>Le 2024-07-09 09:36:46</td>
+        <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+    </tr>
+    <tr>
+      <td data-label="Client">Mark</td>
+      <td data-label="Départ">Rue Des Deux Frères 7
+        78150 Le Chesnay-rocquencourt</td>
+      <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Arrivée</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Inventaire</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Logistique</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Tarification</span> </td>
+      <td data-label="Visite"><span class="badge badge-success"><i class="bx bx-check"></i> RDV Technique Effectuée</span><br>
+        03/07/2024 09:30<br>
+        <span class="badge badge-success">Megange Fabrice</span><br>
+        Devis Envoyé par : Jamila Jamila,<br> Le 2024-07-03 14:08:28</td>
+      <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+
+  </tr>
+  <tr>
+    <td data-label="Client">Mark</td>
+      <td data-label="Départ">9 Sq. des Genêts
+        78114 Magny-les-Hameaux</td>
+      <td data-label="Suivi"><span class="badge badge-success"><i class="bx bx-check"></i> Acces Départ</span> <span class="badge badge-success"><i class="bx bx-check"></i> Acces Arrivée</span>  <span class="badge badge-success"><i class="bx bx-check"></i> Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-success"><i class="bx bx-check"></i> Tarification</span> </td>
+      <td data-label="Visite"><span class="badge badge-warning">VISIO Programmée</span><br>
+        03/07/2024 18:20 <br>
+        <span class="badge badge-success">Sarra Sarra</span><br>
+        Devis Envoyé par : Sarra Sarra, <br>Le 2024-07-03 18:45:54</td>
+      <td data-label="Tarification"><button class="btn btn-primary" style="margin-top: 10px;"> Créer</button></td>
+
+  </tr>
+  <tr>
+    <td data-label="Client">Mark</td>
+      <td data-label="Départ">47 Boulevard De La République
+        92250 La Garenne-colombes</td>
+      <td data-label="Suivi"><span class="badge badge-danger"> <i class="bx bx-x-circle"></i> Acces Départ</span> <span class="badge badge-danger"> <i class="bx bx-x-circle"></i>Acces Arrivée</span> <span class="badge badge-success"><i class="bx bx-check"></i>Inventaire</span> <span class="badge badge-success"><i class="bx bx-check"></i> Logistique</span> <span class="badge badge-danger"><i class="bx bx-x-cirlce"></i> Tarification</span> </td>
+      <td data-label="Visite"><span class="badge badge-success"> <i class="bx bx-check"></i>Appel Telephonique Programmée</span><br>
+        03/07/2024 18:30<br>
+        <span class="badge badge-success">Megange Fabrice</span><br>
+        Devis Envoyé par : Hafsia Sheyma, <br>Le 2024-07-09 09:36:46</td>
+      <td data-label="Tarification"><button class="btn btn-primary"> Créer</button></td>
+  </tr>
+    </tbody>
+</table>
+
+</div>

@@ -1,0 +1,204 @@
+<style>
+  ion-segment-button::part(indicator-background) {
+    background: #08a391;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+  
+  /* Material Design styles */
+  ion-segment-button.md::part(native) {
+    color: #000;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  ion-label{
+    font-size:x-small;
+  }
+
+  .segment-button-checked.md::part(native) {
+    color: #08a391;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  ion-segment-button.md::part(indicator-background) {
+    height: 4px;
+
+  }
+  
+  /* iOS styles */
+  ion-segment-button.ios::part(native) {
+    color: #08a391;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .segment-button-checked.ios::part(native) {
+    color: #fff;
+  }
+  
+  ion-segment-button.ios::part(indicator-background) {
+    border-radius: 20px;
+  }
+
+ion-segment-button ion-label {
+  display: flex;
+  flex: 1; /* Make the label fill the button */
+  justify-content: center; /* Center text horizontally */
+  text-align: center; /* Ensure text is centered inside the label */
+  white-space: nowrap; /* Prevent text from wrapping */
+
+}
+  @media (max-width: 700px) {
+    ion-segment {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    ion-segment-button {
+      flex: 1 0 45%; /* Adjust the percentage to control the width */
+      margin: 2px; /* Add some margin for spacing between buttons */
+      white-space: nowrap;
+    }
+  
+    ion-segment-button ion-label {
+      font-size: xx-small;
+      
+    }}
+</style>
+<div class="sidemenu-area" >
+  <div class="sidemenu-header">
+          <img src="assets/img/small-logo.png" alt="image">
+          <span>Olaf</span>
+
+      <div class="burger-menu d-none d-lg-block"  >
+          <span class="top-bar"></span>
+          <span class="middle-bar"></span>
+          <span class="bottom-bar"></span>
+      </div>
+
+      <div class="responsive-burger-menu d-block d-lg-none" id="burger-menu"  >
+          <span class="top-bar" ></span>
+          <span class="middle-bar"></span>
+          <span class="bottom-bar"></span>
+      </div>
+  </div>
+
+  <div class="sidemenu-body" style="pointer-events:none;">
+      <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+          <li class="nav-item-title">
+              Main
+          </li>
+
+          <li class="nav-item">
+              <a href="#" class="collapsed-nav-link nav-link" aria-expanded="false">
+                  <span class="icon"><i class='bx bx-home-circle'></i></span>
+                  <span class="menu-title">Dashboard</span>
+                  <span class="badge"></span>
+              </a>
+
+              <ul class="sidemenu-nav-second-level">
+                  <li class="nav-item">
+                      <a href="dashboard-analytics.html" class="nav-link">
+                          <span class="icon"><i class='bx bx-analyse'></i></span>
+                          <span class="menu-title">Analytics</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="dashboard-ecommerce.html" class="nav-link">
+                          <span class="icon"><i class='bx bxs-shopping-bag'></i></span>
+                          <span class="menu-title">eCommerce</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+
+         
+      </ul>
+  </div>
+</div>
+
+<div class="main-content d-flex flex-column" style="margin-left: -50px;overflow-y: auto;">
+
+<!-- End Sidemenu Area -->
+
+<!-- Start Main Content Wrapper Area -->
+
+  <!-- Top Navbar Area -->
+  <nav class="navbar top-navbar navbar-expand" style="background-color: white;">
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+        <div class="responsive-burger-menu d-block d-lg-none">
+            <span class="top-bar"></span>
+            <span class="middle-bar"></span>
+            <span class="bottom-bar"></span>
+        </div>
+        
+      
+       
+        <ul class="navbar-nav right-nav align-items-center">
+          
+            <li class="nav-item dropdown profile-nav-item" style="margin-right: 30px;">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="menu-profile">
+                        <span class="name">Bonjour! Andro</span>
+                        <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                    </div>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="dropdown-header d-flex flex-column align-items-center">
+                        <div class="figure mb-3">
+                            <img src="assets/img/user1.jpg" class="rounded-circle" alt="image">
+                        </div>
+
+                        <div class="info text-center">
+                            <span class="name">Andro Smith</span>
+                            <p class="mb-3 email"></p>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class="dropdown-footer">
+                        <ul class="profile-nav">
+                            <li class="nav-item">
+                                <a  class="nav-link">
+                                    <i class='bx bx-log-out'></i> <span (click)="logout()">Se déconnecter</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+ </div>
+</nav>
+<ion-segment value="custom">
+  <ion-segment-button value="Accés Départ">
+    <ion-label>Accés Départ</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="Inventaire">
+    <ion-label>Inventaire</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="Accés Arrivé">
+    <ion-label>Accés Arrivée</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="1">
+    <ion-label>Logistique</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="2">
+    <ion-label>Tarification</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="3">
+    <ion-label>Devis</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="4" >
+    <ion-label >Stationnement</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+</div>
